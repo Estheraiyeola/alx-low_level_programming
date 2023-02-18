@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 /**
  * main - printing numbers in base 16
  * Returns: Always 0
@@ -13,5 +14,6 @@ int main(void)
 	for (c = 'a'; c <= 'f'; c++)
 		putchar(c);
 	putchar ('\n');
+
 	return (0);
 }
