@@ -17,10 +17,11 @@ int main(void)
 			{
 				putchar(i + '0');
 				putchar(j + '0');
-				if (i != 57 && j != 57) 
-			{
-				putchar(',');
-				putchar(' ');
+				if (i != 57 && j != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
