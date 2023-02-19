@@ -11,9 +11,9 @@ int main(void)
 
 	for (i = 48; i <= 57; i++)
 	{
-		for (j = 48; j <= 57; j++)
+		for (j = 49; j <= 57; j++)
 		{
-			if (i != 57)
+			if (i != 57 && j != 57)
 			{
 				putchar(',');
 				putchar(' ');
