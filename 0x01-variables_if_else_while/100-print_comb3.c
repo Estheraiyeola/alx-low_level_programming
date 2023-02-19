@@ -10,6 +10,7 @@ int main(void)
 	int j;
 
 	for (i = 48; i <= 57; i++)
+	{
 		for (j = i;;)
 		{
 			if (i != 57)
