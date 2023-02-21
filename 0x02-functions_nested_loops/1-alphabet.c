@@ -5,6 +5,7 @@
  */
 int main(void)
 {
+	print_alphabet(void);
 	_putchar('tolower');
 	_putchar('\n');
 	return (0);
