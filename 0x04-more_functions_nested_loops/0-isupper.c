@@ -7,7 +7,7 @@
  */
 int _isupper(int c)
 {
-	for (c = 65; c <= 90; c++)
+	for (c = 'A'; c <= 'Z'; c++)
 	{
 		_putchar(c);
 	}
