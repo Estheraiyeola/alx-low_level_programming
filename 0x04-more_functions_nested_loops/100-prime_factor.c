@@ -6,23 +6,28 @@
  */
 int main(void)
 {
-	long int n = 612852475143;
-	int large_factor = 0;
-	int i = 2;
+	long int n;
+	n = 612852475143;
+	long int div = 2, ans = 0, maxf;
 
-	while (n != 1)
+	while (n != 0)
 	{
-		if (n % i == 0)
+		if (n % div != 0)
 		{
-			while (n % i == 0)
-			{
-				printf("%d\n", i);
-				n /= i;
-			}
-			large_factor = i;
+			div += 1;
 		}
-		i++;
+		else
+		{
+			maxf = n;
+			n /= div;
+
+			if (n == 1)
+			{
+				printf("%d", maxf);
+				ans = 1;
+				break;
+			}
+		}
 	}
-	printf("%d\n", large_factor);
 	return (0);
 }
