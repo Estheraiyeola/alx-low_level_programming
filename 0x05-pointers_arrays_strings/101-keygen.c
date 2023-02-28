@@ -17,34 +17,34 @@ void random_password_generation(int N)
 	char letter[] = "abcdefghijklmnopqrstuvwxyz";
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char symbols[] = "!@#$^&*?";
-	char password[N];
+	char passgen[N];
 	randomizer = rand() % 4;
 
 	for (i = 0; i < N; i++)
 	{
 		if (randomizer == 1)
 		{
-			password[i] = numbers[rand() % 10];
+			passgen[i] = numbers[rand() % 10];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", passgen[i]);
 		}
 		else if (randomizer == 2)
 		{
-			password[i] = letter[rand() % 26];
+			passgen[i] = letter[rand() % 26];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", passgen[i]);
 		}
 		else if (randomizer == 3)
 		{
-			password[i] = LETTER[rand() % 26];
+			passgen[i] = LETTER[rand() % 26];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", passgen[i]);
 		}
 		else
 		{
-			password[i] = symbols[rand() % 8];
+			passgen[i] = symbols[rand() % 8];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			printf("%c", passgen[i]);
 		}
 	}
 }
