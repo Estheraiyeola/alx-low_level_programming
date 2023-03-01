@@ -7,7 +7,7 @@
  * @n: limit to the concatenation
  * Return: dest
  */
-char*_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int l = 0;
 	int i = 0;
