@@ -12,17 +12,16 @@ int _strcmp(char *s1, char *s2)
 
 	if (s1[i] == '\0' && s2[i] == '\0')
 	{
-		return (0);
+		if (*s1 > *s2)
+		{
+			return (1);
+		}
+		else if (*s1 < *s2)
+		{
+			return (-1);
+		}
+		s1++;
+		s2++;
 	}
-	int a1 = (int) s1[i];
-	int a2 = (int) s2[i];
-
-	if (a1 > a2)
-	{
-		return (1);
-	}
-	if (a2 > a1)
-	{
-		return (-1);
-	}
+	return (0);
 }
