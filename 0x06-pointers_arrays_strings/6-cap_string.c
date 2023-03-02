@@ -3,29 +3,36 @@
 /**
  * cap_string - capitalizes all words of a string
  * @s: the string
- * Return: 0
+ * Return: s
  */
 char *cap_string(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; ++i)
+	while (str[i])
 	{
-		if (i == 0)
+		while (!(s[i] >= 'a' && s[i] <= 'z'))
 		{
-			if (s[i] >= 'a' && s[i] <= 'z')
-			{
-				s[i] = s[i] - 32;
-			}
+			i++;
 		}
-		else if (s[i - 1] == ' ')
+		if (s[i - 1] == ' ' ||
+		s[i -1] == '\t' || 
+		s[i - 1] == '\n' || 
+		s[i - 1] == ',' || 
+		s[i - 1] == ';' || 
+		s[i - 1] == '.' || 
+		s[i - 1] == '!' || 
+		s[i - 1] == '?' || 
+		s[i - 1] == '"' || 
+		s[i - 1] == '(' || 
+		s[i - 1] == ')' || 
+		s[i - 1] == '{' || 
+		s[i - 1] == '}' || 
+		i == 0)
 		{
-			if (s[i] >= 'a' && s[i] <= 'z')
-			{
-				s[i] = s[i] - 32;
-			}
+			s[i] -= 32;
 		}
+		i++;
 	}
-	return (0);
+	return (s);
 }
-
