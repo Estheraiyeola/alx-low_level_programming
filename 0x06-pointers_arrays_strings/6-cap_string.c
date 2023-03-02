@@ -7,22 +7,25 @@
  */
 char *cap_string(char *s)
 {
-	int a;
 	int i;
-	int vsc = 0;
-	char sc[] = {32, '\t', '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (s[a])
+	for (i = 0; s[i] != '\0'; ++i)
 	{
-		while (i < vsc)
+		if (i == 0)
 		{
-			if ((a == 0 || s[a -1] == sc[i]) && (s[a] >= 'a' &&  s[a] <= 'z'))
+			if (s[i] >= 'a' && s[i] <= 'z')
 			{
-				s[a] = s[a] - 32;
+				s[i] = s[i] - 32;
 			}
-			i++;
 		}
-		a++;
+		else if (s[i - 1] == ' ')
+		{
+			if (s[i] >= 'a' && s[i] <= 'z')
+			{
+				s[i] = s[i] - 32;
+			}
+		}
 	}
 	return (0);
 }
+
