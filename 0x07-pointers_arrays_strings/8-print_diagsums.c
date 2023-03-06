@@ -19,6 +19,6 @@ void print_diagsums(int *a, int size)
 		sum_1 += *(a + i * size + i);
 		sum_2 += *(a + i * size + (size - 1 - i));
 	}
-	printf("Sum of Diagonal 1: %d\n", sum_1);
-	printf("Sum of Diagonal 2: %d\n", sum_2);
+	printf("%d\n", sum_1);
+	printf("%d\n", sum_2);
 }
