@@ -7,13 +7,14 @@
  * @n: number of bytes
  * Return: s
  */
-char *_memset(char *s, char b, int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	char *p = s;
 
-	for (i = 0; i < n; i++)
+	while (n > 0)
 	{
-		s[i] = b;
+		*p++ = b;
+		n--;
 	}
 	return (s);
 }
