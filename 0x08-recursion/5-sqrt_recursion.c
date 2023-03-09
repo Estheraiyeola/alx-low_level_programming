@@ -7,32 +7,23 @@
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
 	if (n == 0 || n == 1)
 	{
 		return (n);
 	}
-	return (recursive_sqrt(n, 1, n));
-}
-int recursive_sqrt(int n, int start, int end)
-{
-	if (end < start)
+
+	int r = _sqrt_recursion(n - 1) + 1;
+
+	if (r * r > n)
 	{
 		return (-1);
 	}
-	int mid = (start + end) / 2;
-	int square = mid * mid;
-
-	if (square == n)
+	else if (r * r == n)
 	{
-		return (mid);
+		return (r);
 	}
-	if (square > n)
+	else
 	{
-		return (recursive_sqrt(n, start, mid - 1));
+		return (_sqrt_recursion(n - 1));
 	}
-	return (recursive_sqrt(n, mid + 1, end));
 }
